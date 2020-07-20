@@ -18,7 +18,9 @@ public class keyPress : MonoBehaviour
 
         foreach(int i in arr)
         {
+            //２の時何もプリントしません
             if (i == 2) continue;
+            //３のとき終わります
             else if (i == 3) break;
 
             Debug.Log(i);
