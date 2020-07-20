@@ -14,6 +14,7 @@ public class CookDinner : State<Elsa>
     {
         get
         {
+            //台所に行きます
             return Directory.instance.kitchen;
         }
     }
@@ -27,6 +28,7 @@ public class CookDinner : State<Elsa>
     {
         if (UnityEngine.Random.Range(0f, 1f) < .01f)
         {
+            //メッセージ送ります
             MassageDispacther.instance.DispatchMassage(TimeSpan.Zero, entity, Miner.instance,(int)MssageType.StewReady);
             entity.stateMachine.TravelTo(ElsaEat.instance);
         }
@@ -34,6 +36,7 @@ public class CookDinner : State<Elsa>
 
     public override void Exit(Elsa entity)
     {
+        
         entity.lastDinner = DateTime.Now;
     }
 
