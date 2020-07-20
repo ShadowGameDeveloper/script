@@ -35,13 +35,15 @@ public class ElsaGlobalState : State<Elsa>
 
     public override bool handelMassage(Elsa entity, Telegram tele)
     {
+        //メッセージがもらったら
         if(tele.msg == (int)MssageType.HeyHoneyImHome)
         {
+            //lastdinnerの時間をチェックします
             if(DateTime.Now - entity.lastDinner > TimeSpan.FromSeconds(20))
             {
-
+                entity.stateMachine.TravelTo(CookDinner.instance);
             }
-            entity.stateMachine.TravelTo(CookDinner.instance);
+           
             return true;
         }
         return false;
