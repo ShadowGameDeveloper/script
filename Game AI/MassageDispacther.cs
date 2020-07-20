@@ -13,10 +13,12 @@ public class MassageDispacther
 
     SortedList<DateTime, Telegram> telegramss = new SortedList<DateTime, Telegram>();
 
+    //メッセージを送る関数、誰か送る、誰がもらう、メッセージ
     public void DispatchMassage(TimeSpan delay, BaseGameEntity sender, BaseGameEntity reciever, int msg)
     {
         var telegram = new Telegram(sender,reciever,msg,DateTime.Now + delay);
-        if(delay == TimeSpan.Zero)
+        //時間が０になってメッセージ送ります。
+        if (delay == TimeSpan.Zero)
         {
             Discharge(telegram);
         }
