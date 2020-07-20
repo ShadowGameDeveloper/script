@@ -14,6 +14,7 @@ public class MinerEat : State<Miner>
     {
         get
         {
+            //台所のゲームオブジェクトいきます。
             return Directory.instance.kitchen;
         }
     }
@@ -27,6 +28,8 @@ public class MinerEat : State<Miner>
     {
         if(UnityEngine.Random.Range(0f,1f) < 0.01f)
         {
+            //ランダム
+            //家に行くと休みます
             entity.stateMachine.TravelTo(GoHomeAndRestTillRested.instatance);
         }
     }
