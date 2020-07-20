@@ -12,6 +12,7 @@ public class PlaneControl : MonoBehaviour
         {
             for(int j = 0; j < 20; j++)
             {
+                //オブジェクトを作ります
                 Instantiate(CubeMaster, new Vector3(i, 0, j), Quaternion.identity);
             }
             
