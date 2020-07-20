@@ -14,6 +14,7 @@ public class moveing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //動き関数
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(transform.forward * 0.1f);
