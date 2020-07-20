@@ -14,6 +14,7 @@ public class ElsaEat : State<Elsa>
     {
         get
         {
+            //台所に行きます
             return Directory.instance.kitchen;
         }
     }
