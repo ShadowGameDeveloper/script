@@ -19,6 +19,7 @@ public class MoveLevel : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        //ぶつかるとオブジェクトのタッグを比べます
         if (other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene("level 2");
