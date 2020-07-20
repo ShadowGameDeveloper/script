@@ -12,6 +12,7 @@ public class enemyHit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         //check = GetComponent<GameObject>();
         player = GetComponent<GameObject>();
         alien1 = this.gameObject.transform.position;
@@ -30,6 +31,7 @@ public class enemyHit : MonoBehaviour
         this.gameObject.transform.position = alien1;
         collision.transform.position = check.transform.position;
     }*/
+    //ぶつかる関数
     private void OnTriggerEnter(Collider other)
     {
         /*Debug.Log("enemy Hit");
