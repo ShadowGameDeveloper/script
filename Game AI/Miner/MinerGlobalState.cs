@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MinerGlobalState : State<Miner>
 {
+    //マイナーのグローバルステートの管理
     public static MinerGlobalState instance = new MinerGlobalState();
     private MinerGlobalState()
     {
