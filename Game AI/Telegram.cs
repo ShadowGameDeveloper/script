@@ -8,6 +8,8 @@ public class Telegram
     public readonly int msg;
     public readonly DateTime dispatchTime;
    
+
+    //メッセージ送ります
     public Telegram(BaseGameEntity sender, BaseGameEntity reciever, int msg, DateTime dispatchTime)
     {
         this.sender = sender;
