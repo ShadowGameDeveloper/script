@@ -16,6 +16,7 @@ public class pathMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //navmesh通り、ターゲット探します
         GetComponent<NavMeshAgent>().destination = tar.transform.position;
     }
 }
