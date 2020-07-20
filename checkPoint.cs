@@ -19,6 +19,7 @@ public class checkPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //チェックポイントぶつかるとオブジェクトを消えますとからオブジェクト作ります
         this.gameObject.SetActive(false);
         emp.transform.position = this.gameObject.transform.position;
     }
