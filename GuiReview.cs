@@ -7,6 +7,7 @@ public class GuiReview : MonoBehaviour
     void OnGUI()
     {
         int num = 100;
+        //numの階乗を精算します
         string msg = num + "の場合は" + Goukei(num) + "です";
         Message(msg);
     }
@@ -20,6 +21,7 @@ public class GuiReview : MonoBehaviour
 
     int Goukei(int n)
     {
+        //階乗を精算する関数
         int total = 0;
         for(int i = 1; i<= n; i++)
         {
