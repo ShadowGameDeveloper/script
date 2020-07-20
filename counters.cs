@@ -7,6 +7,7 @@ public class counters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //sample関数を始まります
         StartCoroutine("sample", 234);
     }
 
