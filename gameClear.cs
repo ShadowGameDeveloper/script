@@ -19,6 +19,7 @@ public class gameClear : MonoBehaviour
 
     public void menuUtama()
     {
+        //他のシーン呼びます
         SceneManager.LoadScene("new Game");
     }
 }
