@@ -7,15 +7,17 @@ public class colorsss2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //まず、changecolor1の関数を呼びます
         StartCoroutine("changeColor1");
     }
 
     IEnumerator changeColor1()
     {
+        //オブジェクトは赤色に付きます
         gameObject.GetComponent<Renderer>().material.color = Color.red;
-
+        //1秒を待ちます
         yield return new WaitForSeconds(1);
-        
+        //changecolor2呼びます
         StartCoroutine("changeColor2");
     }
 
