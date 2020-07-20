@@ -19,11 +19,13 @@ public class GoHomeAndRestTillRested : State<Miner>
     }
     public override void Enter(Miner entity)
     {
+        //はいる時メッセージ送ります
         MassageDispacther.instance.DispatchMassage(TimeSpan.Zero,entity,Elsa.instance, (int)MssageType.HeyHoneyImHome);
     }
 
     public override void Execute(Miner entity)
     {
+        //ランダム
         if (UnityEngine.Random.Range(0f, 1f) < .001f)
         {
             entity.stateMachine.TravelTo(EnterMineAndDigForNugget.instance);
@@ -37,6 +39,7 @@ public class GoHomeAndRestTillRested : State<Miner>
 
     public override bool handelMassage(Miner entity, Telegram tele)
     {
+        //メッセージもらったら食べるステート入ります
         if(tele.msg == (int)MssageType.StewReady)
         {
             entity.stateMachine.TravelTo(MinerEat.instance);
