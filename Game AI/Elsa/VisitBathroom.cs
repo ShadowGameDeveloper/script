@@ -13,6 +13,7 @@ public class VisitBathroom : State<Elsa>
     {
         get
         {
+            //お手洗いに行きます
             return Directory.instance.outHouse;
         }
     }
