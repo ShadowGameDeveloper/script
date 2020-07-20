@@ -14,6 +14,7 @@ public class DoHouseWork : State<Elsa>
     {
         get
         {
+            //家に行く
             return Directory.instance.home;
         }
     }
@@ -27,6 +28,8 @@ public class DoHouseWork : State<Elsa>
     {
         if(UnityEngine.Random.Range(0f,1f) < 0.001f)
         {
+            //ランダム
+            //お手洗いに行きます
             entity.stateMachine.TravelTo(VisitBathroom.instance);
         }
     }
