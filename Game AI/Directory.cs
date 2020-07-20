@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Directory : MonoBehaviour
 {
-    
+    //ゲームオブジェクトの管理
     public GameObject mine;
     public GameObject home;
     public GameObject bank;
