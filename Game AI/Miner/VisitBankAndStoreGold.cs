@@ -15,12 +15,15 @@ public class VisitBankAndStoreGold : State<Miner>
     {
         get
         {
+            //銀行のゲームオブジェクトに行く
             return Directory.instance.bank;
         }
     }
     public override void Enter(Miner entity)
     {
+        //銀行のゴールド増えます
         entity.goldInBank += entity.goldPerson;
+        //マイナーのゴールドは０になります
         entity.goldPerson = 0;
     }
 
@@ -28,6 +31,8 @@ public class VisitBankAndStoreGold : State<Miner>
     {
         if (UnityEngine.Random.Range(0f, 1f) < .1f)
         {
+            //ランダム
+            //家に行くと休みます
             entity.stateMachine.TravelTo(GoHomeAndRestTillRested.instatance);
         }
     }
