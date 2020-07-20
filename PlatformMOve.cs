@@ -24,6 +24,7 @@ public class PlatformMOve : MonoBehaviour
         if (this.gameObject.tag == "PlatformZ")
         {
             Debug.Log("Enter Collison Z");
+            //コライダーの中の時プラットホーム動きます
             plat.transform.position += new Vector3(0.0f, 0.0f, 0.1f);
             if (plat.transform.position.z > 17.0f)
             {
@@ -36,6 +37,8 @@ public class PlatformMOve : MonoBehaviour
         }
         if (this.gameObject.tag == "plaformX")
         {
+            //コライダーの中の時プラットホーム動きます
+
             Debug.Log("Enter Collison X");
             plat.transform.Translate(0.1f, 0.0f, 0.0f);
         }
