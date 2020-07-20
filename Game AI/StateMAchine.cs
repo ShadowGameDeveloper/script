@@ -12,7 +12,7 @@ public class StateMAchine<EntityType> where EntityType : BaseGameEntity
     internal GameObject target;
     State<EntityType> destinationtoState;
 
-
+    //ステートの管理
     public StateMAchine(EntityType owner,State<EntityType> currentState, State<EntityType> globalState)
     {
         this.owner = owner;
@@ -21,7 +21,7 @@ public class StateMAchine<EntityType> where EntityType : BaseGameEntity
     }
 
 
-
+    //ステート変わるとき
     public void ChangeState(State<EntityType> newState)
     {
         MonoBehaviour.print(newState.GetType());
@@ -33,6 +33,7 @@ public class StateMAchine<EntityType> where EntityType : BaseGameEntity
         currentState.Enter(owner);
     }
     
+    //メッセージ管理
     public void HandleMassage(Telegram tele)
     {
         if (currentState.handelMassage(owner, tele))
@@ -45,11 +46,13 @@ public class StateMAchine<EntityType> where EntityType : BaseGameEntity
         }
     }
 
+    //前のステート戻ります
     public void RevertToPerviousState()
     {
         ChangeState(previousState);
     }
 
+    //ステート実行する
     public void Execute()
     {
         if (globalState != null)
@@ -74,6 +77,8 @@ public class StateMAchine<EntityType> where EntityType : BaseGameEntity
             }
         }
     }
+
+    //ステートのGameObjectに多動します
     public void TravelTo(State<EntityType> destinationtoState)
     {
         target = destinationtoState.target;
