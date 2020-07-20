@@ -27,6 +27,7 @@ public class GUIwhile : MonoBehaviour
         int max = 100;
         int total = 0;
 
+
         for(int i = 1; i <= max; i++)
         {
             total += i;
