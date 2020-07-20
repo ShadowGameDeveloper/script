@@ -25,8 +25,10 @@ public class EnterMineAndDigForNugget : State<Miner>
 
     public override void Execute(Miner entity)
     {
+        //ゴールド探すときゴールドと倦怠感が増えました
         entity.goldPerson++;
         entity.fatigue++;
+        //ポケットがいっぱいになったら銀行へいきます。
         if (entity.PocketFull())
         {
             entity.stateMachine.TravelTo(VisitBankAndStoreGold.instance);
