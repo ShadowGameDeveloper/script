@@ -10,6 +10,7 @@ public class countGUI : MonoBehaviour
         
     }
 
+
     void OnGUI()
     {
         int x = 100;
@@ -20,6 +21,7 @@ public class countGUI : MonoBehaviour
 
     void Message(string msg)
     {
+        //GUIを表示する
         GUI.Box(new Rect(10, 10, 350, 100), "Massage");
         GUI.Label(new Rect(35, 60, 300, 50), msg);
     }
