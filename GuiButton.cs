@@ -14,7 +14,7 @@ public class GuiButton : MonoBehaviour
     {
         /*GUI.Label(new Rect(50, 50, 50, 50), "Hello");
         GUI.Button(new Rect(50, 100, 50, 50), "World");*/
-
+        //GUIボタン
         if(GUI.Button(new Rect(100, 100, 100, 100), "Hello"))
         {
             Debug.Log("Hello World");
