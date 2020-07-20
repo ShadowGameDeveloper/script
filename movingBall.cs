@@ -27,11 +27,14 @@ public class movingBall : MonoBehaviour
         
         if(tagss == " ")
         {
+            //タイマー始まります
             timerS += Time.deltaTime;
         }
         
         if(timerS >= 59)
         {
+            //タイマーは分と秒分けます
+            //６０秒1分
             timerS = 0;
             timerM += 1;
         }
@@ -39,6 +42,7 @@ public class movingBall : MonoBehaviour
         minss.text = timerM.ToString();
         sec.text = Mathf.Round(timerS).ToString();
 
+        //ボールの動き方
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(transform.up * 0.1f);
@@ -61,10 +65,12 @@ public class movingBall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //スタートオブジェクトぶつかるとstartメッセージ表します
         if (other.gameObject.CompareTag("start"))
         {
             tagss = "start"; 
         }
+        //終わるォジェクトぶつかるとendメッセージ表します
         if (other.gameObject.CompareTag("end"))
         {
             tagss = "end";
@@ -91,6 +97,7 @@ public class movingBall : MonoBehaviour
 
     private void OnGUI()
     {
+        //オブジェクトをぶつかるとタイマーが一時停止
         if(tagss == "start")
         {
             GUI.Box(new Rect(0, 0, 100 , 50), "START");
