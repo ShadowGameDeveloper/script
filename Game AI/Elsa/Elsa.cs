@@ -15,6 +15,7 @@ public class Elsa : BaseGameEntity
     protected void Start()
     {
         instance = this;
+        //elsaの場合、ますはDoHouseWorkのステートにはいります
         stateMachine = new StateMAchine<Elsa>(this, DoHouseWork.instance, ElsaGlobalState.instance);
 
     }
